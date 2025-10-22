@@ -14,7 +14,7 @@ ifeq ($(OPT),1)
 	CFLAGS += -DMLD_CONFIG_USE_NATIVE_BACKEND_ARITH -DMLD_CONFIG_USE_NATIVE_BACKEND_FIPS202
 endif
 
-ALL_TESTS = test_mldsa acvp_mldsa bench_mldsa bench_components_mldsa gen_KAT test_stack
+ALL_TESTS = test_mldsa acvp_mldsa bench_mldsa bench_components_mldsa gen_KAT gen_KAT_verbose test_stack
 
 MLDSA44_DIR = $(BUILD_DIR)/mldsa44
 MLDSA65_DIR = $(BUILD_DIR)/mldsa65
