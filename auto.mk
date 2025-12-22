@@ -1,1 +1,1 @@
-../../test/mk/auto.mk
+test/mk/auto.mk
