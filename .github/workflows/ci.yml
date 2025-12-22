@@ -33,22 +33,22 @@ jobs:
            mode: native
            nix_shell: ci
          - runner: ubuntu-24.04-arm
-           name: 'ubuntu-latest (aarch64)'
+           name: 'ubuntu-latest (aarch64 to x86_64)'
            arch: x86_64
            mode: cross-x86_64
            nix_shell: ci-cross-x86_64
          - runner: ubuntu-24.04-arm
-           name: 'ubuntu-latest (aarch64)'
+           name: 'ubuntu-latest (aarch64 to riscv64)'
            arch: riscv64
            mode: cross-riscv64
            nix_shell: ci-cross-riscv64
          - runner: ubuntu-24.04-arm
-           name: 'ubuntu-latest (aarch64)'
+           name: 'ubuntu-latest (aarch64 to riscv32)'
            arch: riscv32
            mode: cross-riscv32
            nix_shell: ci-cross-riscv32
          - runner: ubuntu-24.04-arm
-           name: 'ubuntu-latest (ppc64le)'
+           name: 'ubuntu-latest (aarch64 to ppc64le)'
            arch: ppc64le
            mode: cross-ppc64le
            nix_shell: ci-cross-ppc64le
@@ -58,12 +58,12 @@ jobs:
            mode: native
            nix_shell: ci
          - runner: ubuntu-latest
-           name: 'ubuntu-latest (x86_64)'
+           name: 'ubuntu-latest (x86_64 to aarch64)'
            arch: aarch64
            mode: cross-aarch64
            nix_shell: ci-cross-aarch64
          - runner: ubuntu-latest
-           name: 'ubuntu-latest (x86_64)'
+           name: 'ubuntu-latest (x86_64 to aarch64_be)'
            arch: aarch64_be
            mode: cross-aarch64_be
            nix_shell: ci-cross-aarch64_be
@@ -79,7 +79,7 @@ jobs:
           - {external: true,
              target: {
                runner: ubuntu-24.04-arm,
-               name: 'ubuntu-latest (aarch64)',
+               name: 'ubuntu-latest (aarch64 to x86_64)',
                arch: x86_64,
                mode: cross-x86_64,
                nix_shell: ci-cross-x86_64
@@ -87,7 +87,7 @@ jobs:
           - {external: true,
              target: {
                runner: ubuntu-24.04-arm,
-               name: 'ubuntu-latest (aarch64)',
+               name: 'ubuntu-latest (aarch64 to riscv64)',
                arch: riscv64,
                mode: cross-riscv64,
                nix_shell: ci-cross-riscv64
@@ -95,7 +95,7 @@ jobs:
           - {external: true,
              target: {
                runner: ubuntu-24.04-arm,
-               name: 'ubuntu-latest (aarch64)',
+               name: 'ubuntu-latest (aarch64 to riscv32)',
                arch: riscv32,
                mode: cross-riscv32,
                nix_shell: ci-cross-riscv32
@@ -103,7 +103,7 @@ jobs:
           - {external: true,
              target: {
                runner: ubuntu-24.04-arm,
-               name: 'ubuntu-latest (ppc64le)',
+               name: 'ubuntu-latest (aarch64 to ppc64le)',
                arch: ppc64le,
                mode: cross-ppc64le,
                nix_shell: ci-cross-ppc64le
@@ -119,7 +119,7 @@ jobs:
           - {external: true,
              target: {
                runner: ubuntu-latest,
-               name: 'ubuntu-latest (x86_64)',
+               name: 'ubuntu-latest (x86_64 to aarch64)',
                arch: aarch64,
                mode: cross-aarch64,
                nix_shell: ci-cross-aarch64
@@ -127,7 +127,7 @@ jobs:
           - {external: true,
              target: {
                runner: ubuntu-latest,
-               name: 'ubuntu-latest (x86_64)',
+               name: 'ubuntu-latest (x86_64 to aarch64_be)',
                arch: aarch64_be,
                mode: cross-aarch64_be,
                nix_shell: ci-cross-aarch64_be
